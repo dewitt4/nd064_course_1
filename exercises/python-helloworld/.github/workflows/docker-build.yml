@@ -1,0 +1,15 @@
+## file location and name: # .github/workflows/docker-build.yml
+
+##  Named of the workflow.
+name: python-helloworld
+## Set the trigger policy.
+## In this case, the workflow is execute on a `push` event,
+## or when a new commit is pushed to the repository
+on: [push]
+## List the steps to be executed by the workflow
+jobs:
+  ## Set the image tag
+  tag: latest
+    ## Configure the operating system the workflow should run on.
+    ## In this case, the job on Ubuntu
+    runs-on: linux/amd64,linux/arm64
